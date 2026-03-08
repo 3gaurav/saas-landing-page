@@ -1,20 +1,22 @@
-version: 02
+version: 0.2
 
 phases:
- install:
-   runtime-version:
-     nodejs: 18
-   commands:
-   - echo "installing dependencies....."
-   - npm ci --legacy-peer-deps
+  install:
+    runtime-version:
+      nodejs: 18
+    commands:
+     - echo "installing dependenicies ......"
+     - npm ci --legacy-peer-deps
 
- build:
-   commands:
-    - echo "building the appp"
-    - npm run  build
+  build:
+    commands:
+     - echo "building the app"
+     - npm run build
 
-  artifacts:
-    files:
-    - '**/*'
-    base directory: dist
-    discard-path: no
+
+artifacts:
+  files:
+  - '**/*'
+  base-directory: dist
+  discard-paths: no
+
